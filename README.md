@@ -178,8 +178,9 @@ compression beat naive truncation on LongBench v2 Code Repo QA (Long). This is t
 **Compression strength varies by model.** On LongBench v2, Gemini 3.1 Pro was the
 most aggressive at over 95% compression (about 4% retention), while GPT-5.4 was the
 most conservative at roughly 75% (about 27% retention); other models landed in
-between. Stronger compressors such as GPT and Claude also produced the most portable
-output for other readers to decode.
+between. Portability is a separate axis: in cross-model tests, GPT- and
+Claude-compressed inputs were the most portable for other readers to decode, while
+Qwen- and Kimi-compressed inputs caused larger accuracy drops.
 
 All numbers are from the paper ([arXiv:2606.19857](https://arxiv.org/abs/2606.19857)). Pull requests are welcome to develop evals for this project and generate more results.
 
