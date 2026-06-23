@@ -190,6 +190,12 @@ Qwen- and Kimi-compressed inputs caused larger accuracy drops.
 
 All numbers are from the paper ([arXiv:2606.19857](https://arxiv.org/abs/2606.19857)). Pull requests are welcome to develop evals for this project and generate more results.
 
+## Pro Tip
+
+Figure out which strategy works best for your model and use-case. Different combinations may give surprisingly different answers.
+
+No one config that works for all.
+
 ## Development
 
 ```bash
