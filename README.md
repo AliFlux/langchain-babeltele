@@ -8,6 +8,12 @@ and symbolic collapse, then lets downstream models consume the dense text direct
 with no decompression step. The paper reports ~28% of the original token length at
 ~99.5% downstream QA fidelity, with no fine-tuning and pure black-box API access.
 
+```text
+"Q3 revenue is projected to rise ~30% YoY; if it lands, the Berlin team
+ ships the mobile app in October."
+  →  Q3rev📈~30%YoY ∧ ?✅⇒Berlin🚀📱@Oct
+```
+
 Based on *"Large Language Models Do Not Always Need Readable Language"*
 ([arXiv:2606.19857](https://arxiv.org/abs/2606.19857)).
 
@@ -22,11 +28,10 @@ You also need a chat-model provider, e.g. `pip install langchain-anthropic`.
 ## Examples
 
 If you learn faster from running code, start in [examples/](examples/). The
-[hello.py](examples/hello.py) script is the smallest end-to-end run: compress one
-paragraph and print the before/after with token counts.
+[hello.py](examples/hello.py) script is the smallest end-to-end demo run: compress one paragraph and print the before/after with token counts.
 
 ```bash
-cp examples/default.env examples/.env   # add your API key
+cp examples/default.env examples/.env   # and add your API key
 python examples/hello.py
 ```
 
