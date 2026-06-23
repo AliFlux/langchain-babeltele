@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-babeltele"
+version = "0.1.0"
+description = "BabelTele: model-native, high-density text compression for LangChain pipelines and agents."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+keywords = ["langchain", "llm", "compression", "agents", "prompt", "context"]
+authors = [{ name = "laser", email = "laser@outlook.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "langchain>=1.0",
+    "langchain-core>=1.0",
+    "langchain-text-splitters>=0.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[project.urls]
+Homepage = "https://github.com/langchain-babeltele/langchain-babeltele"
+Paper = "https://arxiv.org/abs/2606.19857"
+
+[tool.hatch.build.targets.wheel]
+packages = ["langchain_babeltele"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
