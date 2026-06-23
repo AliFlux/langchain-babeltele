@@ -22,6 +22,7 @@ and an embedding model (BABELTELE_EMBEDDINGS) for retrieval.
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -29,6 +30,11 @@ from langchain.embeddings import init_embeddings
 from langchain_core.vectorstores import InMemoryVectorStore
 
 from langchain_babeltele import BabelTeleCompressor, BabelTeleMemoryStore
+
+# BabelTele output is full of emoji and symbols; force UTF-8 so it prints on
+# consoles that default to a legacy codepage (e.g. cp1252 on Windows).
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # Load default.env first, then .env on top so a local .env can override it.
 _HERE = Path(__file__).parent
