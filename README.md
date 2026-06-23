@@ -148,14 +148,15 @@ compressing text to 27.9% of its original length.**
 of the full-text accuracy at roughly half the tokens, and edges out plain
 summarization. This is what `BabelTeleMemoryStore` does.
 
-Results depend on the compressor and reader models and on the task, so treat these
-as indicative rather than guarantees.
-
 | Method    | Tokens / query | Accuracy | vs. original |
 | --------- | -------------: | -------: | -----------: |
 | Original  |         2819.5 |    64.81 |       100.0% |
 | Summary   |         1365.6 |    61.05 |        94.2% |
 | BabelTele |         1382.2 |    62.53 |        96.5% |
+
+Absolute scores reflect LoCoMo's difficulty (even full context scores only 64.81);
+the point is relative retention. BabelTele preserves 96.5% of baseline accuracy at
+roughly half the tokens, and beats summarization while doing it.
 
 **Multi-agent communication.** Compressing inter-agent messages cut tokens sharply
 with little score loss.
