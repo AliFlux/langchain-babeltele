@@ -9,14 +9,19 @@ description = "BabelTele: model-native, high-density text compression for LangCh
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
+license-files = ["LICENSE"]
 keywords = ["langchain", "llm", "compression", "agents", "prompt", "context"]
-authors = [{ name = "laser", email = "laser@outlook.com" }]
+authors = [{ name = "Ali Ashraf" }]
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
 ]
 dependencies = [
     "langchain>=1.0",
@@ -28,7 +33,9 @@ dependencies = [
 dev = ["pytest>=8", "pytest-asyncio>=0.24"]
 
 [project.urls]
-Homepage = "https://github.com/langchain-babeltele/langchain-babeltele"
+Homepage = "https://github.com/AliFlux/langchain-babeltele"
+Repository = "https://github.com/AliFlux/langchain-babeltele"
+Issues = "https://github.com/AliFlux/langchain-babeltele/issues"
 Paper = "https://arxiv.org/abs/2606.19857"
 
 [tool.hatch.build.targets.wheel]
